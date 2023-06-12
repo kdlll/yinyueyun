@@ -1,0 +1,120 @@
+/* pages/search/search.wxss */
+.search-area{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 60rpx;
+	padding: 10rpx;
+	background-color: red;
+  }
+.mukuai{
+	height: 80rpx;
+	margin-top: 20rpx;
+	text-align: center;
+	box-shadow: 0rpx 1rpx 1rpx #888;
+}
+  .search-input{
+	height: 100%;
+	display: flex;
+	border-radius: 30rpx;
+	justify-content: center;
+	text-align: center;
+	flex-grow: 1;
+	background-color: #fff;
+	color: #666;
+  }
+  
+  .search-icon{
+	width: 60rpx;
+	margin: 10rpx;
+  }
+  
+.banner image{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.navContainer {
+	display: flex;
+  
+  }
+  
+  .navItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 20%;
+  }
+  
+  
+  .navItem .iconfont {
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 100rpx;
+	background: rgb(240, 19, 19);
+	font-size: 50rpx;
+	color: #fff;
+	margin: 20rpx 0;
+  }
+  
+  
+  .navItem text {
+	font-size: 26rpx;
+  }
+  
+.list{
+	display: flex;
+	width: 100%;
+	height: 160rpx;
+	padding: 10rpx 0;
+	box-shadow: 0rpx 1rpx 1rpx #888;
+	
+}
+.list_1{
+	width: 160rpx;
+	height: 160rpx;
+	
+
+	padding-left: 55rpx;
+}
+.list_2{
+	width: 360rpx;
+	height: 160rpx;
+
+}
+.list_3{
+	width: 160rpx;
+	height: 145rpx;
+
+	padding-top: 15rpx;
+}
+.list_3 image{
+	width: 120rpx;
+	height: 120rpx;
+}
+.list_1 image{
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 25rpx;
+}
+
+.list_2 view{
+	width: 300rpx;
+	padding-left: 60rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.musicName{
+	font-size: 30rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+
+}
+.singer{
+	font-size: 26rpx;
+	color: #555;
+}

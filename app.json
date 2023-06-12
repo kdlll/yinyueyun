@@ -1,0 +1,48 @@
+{
+  "pages":[
+    
+    "pages/search/search",
+    "pages/home/home",
+    "pages/zhuce/zhuce",
+
+    "pages/detail/detail",
+    "pages/login/login",
+    "pages/index/index",
+
+    "pages/logs/logs",
+    "pages/play/play"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff0000",
+    "navigationBarTitleText": "音乐云",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "./iamge/1.png",
+        "iconPath": "./iamge/11.png",
+        "pagePath": "pages/play/play",
+        "text": "音乐"
+      },
+      {
+        "selectedIconPath": "./iamge/22.png",
+        "iconPath": "./iamge/2.png",
+        "pagePath": "pages/search/search",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "./iamge/33.png",
+        "iconPath": "./iamge/3.png",
+        "pagePath": "pages/home/home",
+        "text": "个人"
+      }
+    ]
+  },
+  
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,24 @@
+
+<view class="containter">
+    <view class="search-area">
+       <input class="search-input" type="text" placeholder="请输入歌曲名" bindinput="onInput"/>
+       <image class="search-icon" src="../../iamge/search.png" mode="widthFix" bindtap="onSearch"/>
+    </view>
+    <view class="music-box">
+       <view class="info">
+          <image class="poster" src="{{poster}}" mode="widthFix"/>
+          <view class="title">
+             {{name}}
+          </view>
+          <view class="author">
+            {{author}}
+          </view>
+       </view>
+       <view class="control">
+            <button size="mini" bindtap="audioPlay">播放</button>
+            <button size="mini" bindtap="audioPause">暂停</button>
+            <button size="mini" bindtap="audioSeek0">重新播放</button>
+       </view>
+    </view>
+</view>
+

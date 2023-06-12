@@ -1,0 +1,6 @@
+/**app.wxss**/
+@import "/iamge/iconfont/iconfont.wxss";
+
+page {
+  height: 100%;
+}

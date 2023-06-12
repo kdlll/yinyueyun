@@ -1,0 +1,71 @@
+<!--pages/search/search.wxml-->
+<view class="search-area">
+       <input class="search-input" type="text" placeholder="请输入歌曲名" bindinput="onInput"/>
+       <image class="search-icon" src="../../iamge/search.png" mode="widthFix" bindtap="onSearch"/>
+    </view>
+<swiper class="banner" indicator-dots="true" autoplay="true" interval="3500" circular="true">
+        <block wx:for="{{list}}" wx:key="*this">
+          <swiper-item>
+            <!--view class="swiper-item {{item}}">{{item}}</view -->
+			<image src="{{item.album.blurPicUrl}}" data-id="{{item.id}}" bindtap="play" ></image>
+          </swiper-item>
+        </block>
+</swiper>
+ <!-- 五个图标导航区域 -->
+ <view class="navContainer">
+    <view class="navItem" bindtap="toRecommendSong">
+      <text class="iconfont icon-meirituijian"></text>
+      <text>每日推荐</text>
+    </view>
+    <view class="navItem" bindtap="toOther">
+      <text class="iconfont icon-gedan1"></text>
+      <text>Other页面</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-icon-ranking"></text>
+      <text>排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai"></text>
+      <text>电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-zhiboguankanliangbofangsheyingshexiangjixianxing"></text>
+      <text>直播</text>
+    </view>
+  </view>
+<view class="mukuai">
+   每日排行榜
+</view>
+ <view wx:for="{{paihangList}}" wx:key="*this" wx:for-index='i'>
+  <view class="list">
+   <view class="list_1">
+     <image src="{{item.album.blurPicUrl}}"></image>
+   </view>
+   <view class="list_2">
+     <view class="musicName">{{item.name}}</view>
+     <view class="singer">{{item.artists[0].name}}</view>
+   </view>
+   <view data-id="{{item.id}}" class="list_3" bindtap="play">
+     <image src="../../iamge/bofan.png" mode=""/>
+   </view>
+</view>
+ </view>
+<view class="mukuai">
+   搜索板块
+</view>
+<view wx:for="{{musicList}}" wx:key="*this" wx:for-index='i'>
+  <view class="list">
+   <view class="list_1">
+     <image src="{{imaUrlList[i]}}"></image>
+   </view>
+   <view class="list_2">
+     <view class="musicName">{{item.album.name}}</view>
+     <view class="singer">{{item.artists[0].name}}</view>
+   </view>
+   <view data-id="{{item.id}}" class="list_3" bindtap="play">
+     <image src="../../iamge/bofan.png" mode=""/>
+   </view>
+</view>
+
+</view>

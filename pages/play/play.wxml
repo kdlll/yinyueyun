@@ -1,0 +1,36 @@
+<!--pages/play/play.wxml-->
+<view>
+    <view class="bg">
+	   <image src="{{imgUrl}}"></image>
+	</view>
+	<view class="name">
+	   {{name}}
+	</view>
+	<view class="pan">
+	   <swiper class="pan1">
+	      <swiper-item class="item1">
+		     <image class="{{changeDate=='暂停'?'':'clear'}}" src="{{imgUrl}}"></image>
+		  </swiper-item>
+		  <swiper-item class="item2">
+		     <scroll-view class="scr" scroll-y='false' scroll-top="{{top}}">
+			   <view wx:for-index='in' class="{{ in == index ? 'color' : '' }}" wx:for="{{lrcList1}}">{{item[1]}}</view>
+			 </scroll-view>
+		  </swiper-item>
+	   </swiper>
+	</view>
+	<!--进度条-->
+	<view class="timebox">
+	   <view class="start_time">{{playtime}}</view>
+	   <slider bindchange="silderchange" activeColor="red" block-size="14" value="{{move}}" max="{{max}}"></slider>
+	   <view class="end_time">{{totaltime}}</view>
+	</view>
+	<view class="box">
+	   <image bindtap="changeT" src="../../iamge/{{mode == 'loop'? '顺序':'单曲'}}.png"></image>
+	   <image bindtap="lastSong" src="../../iamge/上一首.png"></image>
+	   <image src="../../iamge/{{changeDate}}.png" bindtap="shift"></image>
+	   <image bindtap="nextSong" src="../../iamge/下一首.png"></image>
+	   <image bindtap="add" src="../../iamge/收藏.png"></image>
+	</view>
+	<audio bindended="changeMusic" action="{{action}}" bindtimeupdate="update" src="http://music.163.com/song/media/outer/url?id={{musicId}}.mp3"></audio>
+</view>
+
